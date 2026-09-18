@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+    <header class="dark-nav">
+        <div class="container d-flex justify-content-between align-items-center py-2">
+            <div class="d-flex align-items-center gap-4">
+                <div class="logo d-flex align-items-center gap-2">
+                    <img src="img/Vector.png" alt="logo" width="20">
+                    <span class="fw-bold text-white">Bookshop</span>
+                </div>
+                <div class="nav-links d-none d-md-flex gap-4">
+                    <a href="/home.html">Home</a>
+                    <a href="/books.html" class="active">Books</a>
+                    <a href="#">About us</a>
+                </div>
+            </div>
+              <div class="d-flex align-items-center gap-3">
+                    <div class="icon-box">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="badge">12</span>
+                    </div>
+            
+          <a href="my cart.html" class="text-decoration-none">
+    <div class="icon-circle-pink">
+        <i class="fa-solid fa-cart-shopping text-white"></i>
+        <span class="badge-custom">10</span>
+    </div>
+</a>
+                
+              <div class="dropdown">
+                        <div class="d-flex align-items-center gap-2 profile-info" data-bs-toggle="dropdown" style="cursor: pointer;">
+                            <div class="profile-img">
+                                <img src="img/profile.jpg">
+                                <span class="green-dot"></span>
+                            </div>
+                            <div class="user-text d-none d-md-block">
+                                <p class="m-0 text-white small fw-bold">John Smith <i class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i></p>
+                                <p class="m-0 text-white small" style="font-size: 11px;">Johnsmith@gmail.com</p>
+                            </div>
+                        </div> 
+
+    <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2 p-2" style="width: 200px;">
+        <li><a class="dropdown-item py-2" href="profile.html"><i class="fa-regular fa-user me-2"></i>Profile</a></li>
+        <li><a class="dropdown-item py-2" href="all.html"><i class="fa-regular fa-clock me-2"></i>Order History</a></li>
+        <li><a class="dropdown-item py-2" href="address.html"><i class="fa-solid fa-location-dot me-2"></i>Address</a></li>
+        <li><a class="dropdown-item py-2" href="help.html"><i class="fa-solid fa-circle-info me-2"></i>Help</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item py-2 text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Log Out</a></li>
+    </ul>
+</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <div class="row">
+            <aside class="col-lg-3">
+                <div class="sidebar-card p-4 bg-white">
+                    <h6 class="fw-bold mb-4" style="color: #E91E63;"><i class="fa-solid fa-sliders me-2"></i> Filter</h6>
+                    
+                    <div class="accordion accordion-flush" id="filterAccordion">
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-white shadow-none p-0 fw-bold small mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCats">
+                                    Categories
+                                </button>
+                            </h2>
+                            <div id="collapseCats" class="accordion-collapse collapse show">
+                                <ul class="filter-list">
+                                    <li class="active">All Categories <span>(145)</span></li>
+                                    <li>Business <span>(24)</span></li>
+                                    <li>Kids <span>(10)</span></li>
+                                    <li>Art <span>(15)</span></li>
+                                    <li>History <span>(32)</span></li>
+                                    <li>Romance <span>(89)</span></li>
+                                    <li>Fantasy <span>(47)</span></li>
+                                    <li>Self Help <span>(163)</span></li>
+                                    <li>Cooking <span>(211)</span></li>
+                                    <li>Sports <span>(92)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-white shadow-none p-0 fw-bold small" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePubs">
+                                    Publishers
+                                </button>
+                            </h2>
+                            <div id="collapsePubs" class="accordion-collapse collapse">
+                               
+
+                        <hr>
+
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-white shadow-none p-0 fw-bold small" type="button" data-bs-toggle="collapse" data-bs-target="#collapseYear">
+                                    Year
+                                </button>
+                            </h2>
+                            <div id="collapseYear" class="accordion-collapse collapse">
+                                <div class="pt-3 small text-muted">
+                                    
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="col-lg-9">
+                <div class="search-area mb-3">
+                    <div class="position-relative">
+                        <input type="text" class="form-control border-0 py-2 shadow-sm rounded-pill ps-4" placeholder="Search for books...">
+                        <i class="fa-solid fa-magnifying-glass position-absolute end-0 top-50 translate-middle-y me-4" style="color: #E91E63;"></i>
+                    </div>
+                </div>
+
+                <div class="tabs-area d-flex gap-2 overflow-auto mb-4 pb-2">
+                    <button class="btn-tab active">Business</button>
+                    <button class="btn-tab">Self Help</button>
+                    <button class="btn-tab">History</button>
+                    <button class="btn-tab">Romance</button>
+                    <button class="btn-tab">Fantasy</button>
+                    <button class="btn-tab">Art</button>
+                    <button class="btn-tab">Kids</button>
+                  <button class="btn-tab">Music</button>
+                     <button class="btn-tab">Cooking</button>
+                </div>
+
+                <div class="book-list">
+                    <div class="book-card-horizontal mb-3 ">
+                        <img src="/img/book 1.png" class="book-img-fluid" alt="book">
+                        <div class="content flex-grow-1 mx-md-4">
+                            <h5 class=" text-dark mb-1">Rich Dad And Poor Dad</h5>
+                            <p class="text-muted tiny-text">What the rich teach their kids about money that the poor and middle class do not!</p>
+                            <div class="gold-stars mb-2">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="ms-2 text-dark fw-bold small">5.0</span> <span class="text-muted tiny-text ms-1">(2,125 Reviews)</span>
+                            </div>
+                            <div class="d-flex gap-3 tiny-text text-muted">
+                                <span>Author: <b>Robert T. Kiyosaki</b></span>
+                                <span>Year: <b>1997</b></span>
+                            </div>
+                        </div>
+                        <div class="actions text-md-end mt-3 mt-md-0">
+                            <h4 class="fw-bold mb-3">$40.00</h4>
+                            <div class="d-flex gap-2 justify-content-md-end">
+                                <button class="btn-pink-action">Add To Cart <i class="fa-solid fa-cart-shopping ms-1"></i></button>
+                                <button class="btn-heart-outline"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card-horizontal mb-3">
+                        <img src="img/book 1.png" class="book-img" alt="book" >
+                        <div class="content flex-grow-1 mx-md-4">
+                            <h5 class=" text-dark mb-1">Rich Dad And Poor Dad</h5>
+                            <p class="text-muted tiny-text">What the rich teach their kids about money that the poor and middle class do not!</p>
+                            <div class="gold-stars mb-2">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="ms-2 text-dark fw-bold small">5.0</span> <span class="text-muted tiny-text ms-1">(2,125 Reviews)</span>
+                            </div>
+                            <div class="d-flex gap-3 tiny-text text-muted">
+                                <span>Author: <b>Robert T. Kiyosaki</b></span>
+                                <span>Year: <b>1997</b></span>
+                            </div>
+                        </div>
+                        <div class="actions text-md-end mt-3 mt-md-0">
+                            <h4 class="fw-bold mb-3">$40.00</h4>
+                            <div class="d-flex gap-2 justify-content-md-end">
+                                <button class="btn-pink-action">Add To Cart <i class="fa-solid fa-cart-shopping ms-1"></i></button>
+                                <button class="btn-heart-outline"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card-horizontal mb-3">
+                        <img src="img/book 1.png" class="book-img" alt="book">
+                        <div class="content flex-grow-1 mx-md-4">
+                            <h5 class=" text-dark mb-1">Rich Dad And Poor Dad</h5>
+                            <p class="text-muted tiny-text">What the rich teach their kids about money that the poor and middle class do not!</p>
+                            <div class="gold-stars mb-2">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="ms-2 text-dark fw-bold small">5.0</span> <span class="text-muted tiny-text ms-1">(2,125 Reviews)</span>
+                            </div>
+                            <div class="d-flex gap-3 tiny-text text-muted">
+                                <span>Author: <b>Robert T. Kiyosaki</b></span>
+                                <span>Year: <b>1997</b></span>
+                            </div>
+                        </div>
+                        <div class="actions text-md-end mt-3 mt-md-0">
+                            <h4 class="fw-bold mb-3">$40.00</h4>
+                            <div class="d-flex gap-2 justify-content-md-end">
+                                <button class="btn-pink-action">Add To Cart <i class="fa-solid fa-cart-shopping ms-1"></i></button>
+                                <button class="btn-heart-outline"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="mt-5 d-flex justify-content-center">
+                    <ul class="pagination gap-2">
+                        <li class="page-item">
+                            <a class="page-link custom-pagination-btn" href="">
+                            <i class="fa-solid fa-chevron-left"></i></a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link custom-pagination-btn active" href="/Product details.html">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link custom-pagination-btn" href="/Customer reviews.html">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link custom-pagination-btn" href="/Recommended books .html">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link custom-pagination-btn" href=""><i class="fa-solid fa-chevron-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </main>
+        </div>
+    </div>
+ <footer class="footer py-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-start flex-wrap">
+                <div class="d-flex flex-column gap-2">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <img src="/img/Vector.png" width="25">
+                        <strong class="text-white">Book Shop</strong>
+                    </div>
+                    <a href="#">Home</a>
+                    <a href="#">Books</a>
+                    <a href="#">About Us</a>
+                </div>
+                <div class="footer-icons d-flex align-items-start gap-2">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown">🌍 English</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Arabic</a></li>
+                </ul>
+            </div>
+            <div class="footer-line my-3"></div>
+            <div class="d-flex justify-content-end">
+                <p class="footer-text m-0">Developed By EraaSoft All Copy Rights Reserved ©2024</p>
+            </div>
+        </div>
+    </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/product.js"></script>
+<script src="/js/wishlist2.js"></script>
+  <script src="/js/api,s.js"></script>
+
+</body>
+</html>
